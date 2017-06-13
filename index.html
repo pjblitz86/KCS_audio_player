@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audio grotuvas KCS projektas</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+
+</head>
+
+<body>
+
+<div id="wrapper"> <!-- aplankas kur bus visas audioplayeris -->
+    <audio id="myTrack"> <!-- audiojuostos vieta -->
+        <source src="media/audio/Wagner-Valhalla.mp3" type="audio/mpeg"/>
+        <!-- supportina dauguma browseriu tik mp3 zemiau pranesimas kuri matys jei nepasileis -->
+        Atnaujinkite narsykle, grotuvas nepasileido
+    </audio>
+    <nav> <!-- juosta kurioje valdymo mygtukai -->
+        <div id="defaultBar"> <!-- virs playerio audiojuostos elementas -->
+            <div id="progressBar"> <!-- pildys kita spalva kai paleisim daina --></div>
+        </div>
+        <div id="buttons"> <!-- mygtukai ir laikas -->
+            <button type="button" id="playButton"></button> <!-- play mygtuko vieta -->
+            <button type="button" id="muteButton"></button> <!-- garso mygtukas -->
+            <span id="currentTime">0:00</span> / <span id="fullDuration">0:00</span> <!-- laikai dainos -->
+            <button type="button" id="playListButton"></button> <!-- playlist mygtukas kuris isskleis playlista -->
+        </div>
+        <div id="playList">
+
+        </div>
+    </nav>
+</div>
+
+
+<script src="js/controls.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/jqcontrols.js"></script>
+</body>
+</html>
