@@ -25,7 +25,7 @@ bar.addEventListener('click', clickedBar, false);
 function playOrPause() { /* paleis/sustabdys takeli kai spausime play mygtuka ir pakeis ikona atitinkamai*/
     if (!myTrack.paused && !myTrack.ended) {
         myTrack.pause();
-        playButton.style.backgroundImage = 'url("/img/play.png")';
+        playButton.style.backgroundImage = 'url("/img/play.jpg")';
         window.clearInterval(updateTime);
         /* sustabdo laiko atnaujinima */
     } else {
@@ -61,7 +61,7 @@ function update() { /*atnaujina laika dabartini */
     } else {
         currentTime.innerHTML = "0.00";
         /* nustato kad pasibaigus trackui laikas griztu i 0.00 */
-        playButton.style.backgroundImage = 'url("/img/play.png")';
+        playButton.style.backgroundImage = 'url("/img/play.jpg")';
         /*ir pasikeistu is pauses i play buttonas */
         progressBar.style.width = "0px";
         /* baigus groti audio juostos uzsipildymo plotis bus 0 kad CSS suprastu */

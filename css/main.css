@@ -1,86 +1,117 @@
 body {
     background-image: url(/img/audioWallpaper.jpg);
     background-size: contain;
-    background-color: #101010;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: top center;
+    font-family: Century Gothic, sans-serif;
+}
+
+p {
+    height: 200px;
+    background-image: url("/img/audioWallpaper2.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+h1 {
+    background-color: rgba(255, 236, 14, 0.85);
+    margin: auto;
+    padding: 10px;
+    color:blue;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 25px;
 }
 
 #wrapper {
-    width: 640px;
-    margin: 30px auto; /*-- virsus, apacia po 30 px, horizontaliai iscentruotas */
+    width: 400px;
+    margin: 50px auto; /*-- virsus, apacia po 50 px, horizontaliai iscentruotas */
+    border:3px solid rgba(255, 236, 14, 0.85);
+    border-radius: 5px;
 }
 
 nav {
-    background-color: rgb(250, 250, 250);
-    height: 100px;
     width: inherit;
     padding-bottom: 3px;
+}
+
+#buttons {
+    background-color: rgba(255, 236, 14, 0.85);
+    width: inherit;
+    height:45px;
+    padding: 3px 0;
 }
 
 #defaultBar {
     width: inherit;
     position: relative; /* kad su progressBar nebutu problemu */
-    background-color: #606060;
-    height: 10px;
+    background-color: #1b1f16;
+    height: 20px;
 }
 
 #progressBar {
     position: absolute; /* kad neislystu is tevinio elemento kuris yra defaultBar */
     height: inherit;
     background-color: #3498DB;
-    width: 0px; /*kad atsirastu po to keisim su JS veliau nustatyti 0px*/
+    width: 0px; /*pildysis proporcingai kai prades groti */
 }
 
 #playButton { /* NERODO ICON!!!*/
-    background-color: rgb(250, 250, 250);
-    border: none;
-    height: 32px;
-    width: 32px;
-    background-image: url("/img/play.png");
+    background-color: rgba(255, 236, 14, 0.85);
+    border: 1px solid blue;
+    height: 40px;
+    width: 40px;
+    background-image: url("/img/play.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 100%;
+}
+
+#buttons span {
+    font-size: 18px;
 }
 
 #muteButton { /* NERODO ICON!!!*/
-    background-color: rgb(250, 250, 250);
-    border: none;
-    height: 32px;
-    width: 32px;
+    background-color: rgba(255, 236, 14, 0.85);
+    border: 1px solid blue;
+    height: 40px;
+    width: 40px;
     background-image: url("/img/muted.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 100%;
 }
 
 #playListButton {
     float: right;
     margin-left: 10px;
-    background-color: rgb(250, 250, 250);
-    border: none;
-    height: 32px;
-    width: 32px;
+    border: 1px solid blue;
+    height: 40px;
+    width: 40px;
     background-image: url("/img/playlist.png");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 100% ;
 }
 
 #playList {
-    position: absolute;
     width: inherit;
     height: 150px;
-    background-color: #4FB6EC;
+    background-color: rgb(196, 255, 247);
     display: none;
     overflow:hidden;
+    padding-top: 10px;
+
 }
 
-#playButton:active, #muteButton:active, #playList:active { /* kai paspaus tuo momentu pasikeis padetis siek tiek kad sukurti efekta paspaudimo */
+#playButton:active, #muteButton:active, #playListButton:active { /* kai paspaus tuo momentu pasikeis padetis siek tiek kad sukurti efekta paspaudimo */
     position: relative;
     top: 2px;
 }
 
 #playList ol {
-    width: 90%;
+    width: 95%;
     list-style-type: decimal;
     padding-left: 40px;
     margin-left: 0px;
@@ -90,7 +121,7 @@ nav {
 #playList ol li {
     width: inherit;
     line-height: 1.5;
-    font-size: 150%;
+    font-size: 100%;
 }
 
 #playList a {
@@ -106,5 +137,5 @@ nav {
 
 .active, #playList ol li:hover {
     font-weight: bold;
-    background-color: aqua;
+    background-color: #ffe415;
 }
