@@ -2,7 +2,7 @@ var myTrack = document.getElementById('myTrack');
 var playButton = document.getElementById('playButton');
 var muteButton = document.getElementById('muteButton');
 
-var duration = document.getElementById('fullDuration', 'fullDuration2');
+var duration = document.getElementById('fullDuration');
 var currentTime = document.getElementById('currentTime');
 
 /* laiko kintamieji pasiverciam sekundes i (minutes ir sekundes) */
