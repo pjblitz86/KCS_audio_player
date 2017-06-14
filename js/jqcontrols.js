@@ -3,6 +3,18 @@ $(document).ready(function () {
     $("#playListButton").click(function () {
         $("#playList").slideToggle("slow");
     });
+
+    $('#myTrack').on('ended', function () {
+        console.log("groju sekanti");
+        current++;
+        if (current == len) { // jei paskutine daina baigiasi persoka i pirma is saraso
+            current = 0;
+            link = playlist.find('a')[0];
+        } else {
+            link = playlist.find('a')[current];
+        }
+        groti($(link), audio[0]); // paleidzia grojimo funkcija
+    });
 });
 
 // playlisto sukurimas, kuria spausime daina, ta paleis
@@ -24,7 +36,8 @@ function paleistiPlaylist() {
         current = link.parent().index();
         groti(link, audio[0]); // paleidzia grojimo funkcija
     });
-    audio[0].addEventListener('ended', function (e) {
+    audio[0].addEventListener('onended', function (e) {
+        console.log("groju sekanti");
         current++;
         if (current == len) { // jei paskutine daina baigiasi persoka i pirma is saraso
             current = 0;
@@ -40,6 +53,7 @@ function groti(link, player) {
     par = link.parent();
     par.addClass('active').siblings().removeClass('active');
     audio[0].load();
+    update();
     audio[0].play();
 }
 

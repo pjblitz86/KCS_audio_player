@@ -12,7 +12,7 @@ var seconds = pad(parseInt(myTrack.duration % 60));
 duration.innerHTML = minutes + ':' + seconds;
 
 /* audio juostos kintamieji */
-var barSize = 640;
+var barSize = 400;
 /* kai stilizuosim audio player nepamirst cia pikseliu pakeist */
 var bar = document.getElementById('defaultBar');
 var progressBar = document.getElementById('progressBar');
