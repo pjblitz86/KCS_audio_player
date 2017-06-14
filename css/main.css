@@ -1,9 +1,13 @@
 body {
+    background-image: url(/img/audioWallpaper.jpg);
     background-color: #101010;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #wrapper {
     width: 640px;
+    height: 200px;
     margin: 30px auto; /*-- virsus, apacia po 30 px, horizontaliai iscentruotas */
 }
 
@@ -49,7 +53,7 @@ nav {
 
 #playListButton {
     float: right;
-    margin-left:10px;
+    margin-left: 10px;
     background-color: rgb(250, 250, 250);
     border: none;
     height: 32px;
@@ -61,12 +65,43 @@ nav {
 
 #playList {
     width: inherit;
-    height: 200px;
+    height: 150px;
     background-color: #4FB6EC;
     display: none;
+    overflow: scroll;
 }
 
 #playButton:active, #muteButton:active, #playList:active { /* kai paspaus tuo momentu pasikeis padetis siek tiek kad sukurti efekta paspaudimo */
     position: relative;
     top: 2px;
+}
+
+#playList ol {
+    width: 90%;
+    list-style-type: decimal;
+    padding-left: 40px;
+    margin-left: 0px;
+    float: left;
+}
+
+#playList ol li {
+    width: inherit;
+    line-height: 1.5;
+    font-size: 150%;
+}
+
+#playList a {
+    text-decoration: none;
+}
+
+#playList ol li span {
+    display: block;
+    float: right;
+    margin-right: 0px;
+    padding-right: 10px;
+}
+
+.active, #playList ol li:hover {
+    font-weight: bold;
+    background-color: aqua;
 }

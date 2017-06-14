@@ -2,7 +2,7 @@ var myTrack = document.getElementById('myTrack');
 var playButton = document.getElementById('playButton');
 var muteButton = document.getElementById('muteButton');
 
-var duration = document.getElementById('fullDuration');
+var duration = document.getElementById('fullDuration', 'fullDuration2');
 var currentTime = document.getElementById('currentTime');
 
 /* laiko kintamieji pasiverciam sekundes i (minutes ir sekundes) */
@@ -31,7 +31,7 @@ function playOrPause() { /* paleis/sustabdys takeli kai spausime play mygtuka ir
     } else {
         myTrack.play();
         playButton.style.backgroundImage = 'url("/img/pause.png")';
-        updateTime = setInterval(update, 500)
+        updateTime = setInterval(update, 500);
         /* 500 yra milisekundes */
         /* iskviecia funkcija update kad atnaujintu laika */
     }
@@ -72,7 +72,7 @@ function update() { /*atnaujina laika dabartini */
 /* paspaudus ant audio juostos iskvieciama si funkcija kuri permes i tam tikra dainos laika */
 function clickedBar(e) {
     if (!myTrack.ended) {
-        var mouseX = e.pageX - bar.offsetLeft
+        var mouseX = e.pageX - bar.offsetLeft;
         /* prisiskiriam X asy kur paspaudem i kintamaji */
         var newTime = mouseX * myTrack.duration / barSize;
         /* apskaiciuojam i kuri laika persokam procentaliai; */
@@ -87,9 +87,3 @@ function clickedBar(e) {
 function pad(d) {
     return (d < 10) ? '0' + d.toString() : d.toString();
 }
-
-/*BUGAI:
- 1. nerodo button paveiksliuku kai uzsikrauna, bet jie tose vietose yra kai paspaudi atsiranda
- 2. takelio pilnas laikas atvaizduojamas NaN not a number kai uzkrauni
- 3. uzkrovus rodo progress juosta papilnejusia, bet cia tik parodymui kad ji yra paskui padarysim width:0
- */

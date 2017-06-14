@@ -11,10 +11,10 @@
 <body>
 
 <div id="wrapper"> <!-- aplankas kur bus visas audioplayeris -->
-    <audio id="myTrack"> <!-- audiojuostos vieta -->
-        <source src="media/audio/Wagner-Valhalla.mp3" type="audio/mpeg"/>
+    <audio id="myTrack" preload="auto" tabindex="0" type="audio/mpeg"> <!-- audioplayer perkuriam is default html5 -->
+        <source src="media/audio/Wagner-Valhalla.mp3" type="audio/mp3"/>
         <!-- supportina dauguma browseriu tik mp3 zemiau pranesimas kuri matys jei nepasileis -->
-        Atnaujinkite narsykle, grotuvas nepasileido
+        Grotuvas nepasileido, atnaujinkite arba naudokite kita narsykle.
     </audio>
     <nav> <!-- juosta kurioje valdymo mygtukai -->
         <div id="defaultBar"> <!-- virs playerio audiojuostos elementas -->
@@ -27,7 +27,17 @@
             <button type="button" id="playListButton"></button> <!-- playlist mygtukas kuris isskleis playlista -->
         </div>
         <div id="playList">
-
+            <!-- sukuriam ordered list su nuorodomis i dainas, pazymim viena active, ja pirma uzkraus -->
+            <ol>
+                <li class="active"><a href="/media/audio/Wagner-Valhalla.mp3">Wagner - Gods enter Valhalla
+                    <span class="fullDuration">0:00</span>
+                </a>
+                </li>
+                <li><a href="/media/audio/P.Grainger-CountryGardens.mp3">P.Grainger - Country Gardens
+                    <span class="fullDuration">0:00</span>
+                </a>
+                </li>
+            </ol>
         </div>
     </nav>
 </div>

@@ -1,31 +1,46 @@
-
-// sukuriam dainu masyva pagal ju buvimo vieta
-var playList = [
-    "media/audio/Wagner-Valhalla.mp3",
-    "media/audio/P.Grainger-CountryGardens"
-];
-
+// isskleidzia/sutraukia playlista kai paspaudziam ant mygtuko
 $(document).ready(function () {
     $("#playListButton").click(function () {
-        // playAudioList(0); // iskviecia sia funkcija 0 masyvo indekse
         $("#playList").slideToggle("slow");
     });
-    var myTrack = document.getElementById("myTrack");
-
-    function playAudioList(x) {
-        var i = 0;
-        myTrack.src = playAudioList[x]; // masyvo indeksas kuri gros
-        myTrack.load(); // reikia kai keiciasi src
-        myTrack.play();
-        myTrack.onended = function () { // kai sugros 1a faila gros likusius
-            i++;
-            if (i > playList.length)  // kai sugroja paskutini loop per nauja nuo pirmo
-                i = 0;
-            }
-            myTrack.src =playList[i];
-            myTrack.load();
-            myTrack.play();
-        }
-
 });
+
+// playlisto sukurimas, kuria spausime daina, ta paleis
+var audio;
+var playlist;
+var tracks;
+var current;
+
+paleistiPlaylist();
+function paleistiPlaylist() {
+    current = 0;
+    audio = $('audio');
+    playlist = $('#playList');
+    tracks = playlist.find('li a');
+    len = tracks.length - 1; // nes nuo 0 pradeda skaiciuot indeksus
+    playlist.find('a').click(function (e) {
+        e.preventDefault();
+        link = $(this);
+        current = link.parent().index();
+        groti(link, audio[0]); // paleidzia grojimo funkcija
+    });
+    audio[0].addEventListener('ended', function (e) {
+        current++;
+        if (current == len) { // jei paskutine daina baigiasi persoka i pirma is saraso
+            current = 0;
+            link = playlist.find('a')[0];
+        } else {
+            link = playlist.find('a')[current];
+        }
+        groti($(link), audio[0]); // paleidzia grojimo funkcija
+    });
+}
+function groti(link, player) {
+    player.src = link.attr('href');
+    par = link.parent();
+    par.addClass('active').siblings().removeClass('active');
+    audio[0].load();
+    audio[0].play();
+}
+
 
