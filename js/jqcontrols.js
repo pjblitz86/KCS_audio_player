@@ -3,7 +3,9 @@ $(document).ready(function () {
     $("#playListButton").click(function () {
         $("#playList").slideToggle("slow");
     });
-
+    $("#playButton").click(function () {
+        $(".gif").show();
+    })
 
 
    /*$('#myTrack').on('ended', function () {
