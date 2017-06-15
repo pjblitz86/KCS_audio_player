@@ -58,3 +58,5 @@ function groti(link, player) {
 }
 
 
+// neatvaizduoja pilno laiko naujai uzkrautoms dainoms iskyrus pirma daina
+// su dainu perejimu masyvas viena i kita pasibaigus

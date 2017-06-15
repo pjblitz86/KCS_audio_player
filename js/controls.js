@@ -13,6 +13,8 @@ duration.innerHTML = minutes + ':' + seconds;
 
 /* audio juostos kintamieji */
 var barSize = 400;
+    // kaip parasyti be skaiciu o pasiimant is css reiksme kad veiktu
+    //document.getElementById('draggable').style.getPropertyValue('width');
 /* kai stilizuosim audio player nepamirst cia pikseliu pakeist */
 var bar = document.getElementById('defaultBar');
 var progressBar = document.getElementById('progressBar');

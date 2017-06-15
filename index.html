@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Audio grotuvas KCS projektas</title>
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/main.css"/>
@@ -10,11 +11,11 @@
 
 <body>
 
-<div id="wrapper"> <!-- aplankas kur bus visas audioplayeris -->
-    <h1>Audio-player projektas v0.5 :)</h1>
+<div id="draggable" class="ui-widget-content"> <!-- aplankas kur bus visas audioplayeris -->
+    <h1>Audio-player projektas v0.3 :)</h1>
     <p></p>
-     <audio id="myTrack" preload="auto" tabindex="0" type="audio/mpeg"> <!-- audioplayer perkuriam is default html5 -->
-        <source src="media/audio/Wagner-Valhalla.mp3" type="audio/mp3"/>
+    <audio id="myTrack" preload="auto" tabindex="0" type="audio/mpeg"> <!-- audioplayer perkuriam is default html5 -->
+        <source src="media/audio/AlanWalker-Fade.mp3" type="audio/mp3"/>
         <!-- supportina dauguma browseriu tik mp3 zemiau pranesimas kuri matys jei nepasileis -->
         Grotuvas nepasileido, atnaujinkite arba naudokite kita narsykle.
     </audio>
@@ -31,12 +32,20 @@
         <div id="playList">
             <!-- sukuriam ordered list su nuorodomis i dainas, pazymim viena active, ja pirma uzkraus -->
             <ol>
-                <li class="active"><a href="/media/audio/Wagner-Valhalla.mp3">Wagner - Gods enter Valhalla
-                    <span class="fullDuration">5:24</span>
+                <li class="active"><a href="/media/audio/AlanWalker-Fade.mp3">Alan Walker - Fade
+                    <span class="fullDuration">4:20</span>
                 </a>
                 </li>
-                <li><a href="/media/audio/P.Grainger-CountryGardens.mp3">P.Grainger - Country Gardens
-                    <span class="fullDuration">2:03</span>
+                <li><a href="/media/audio/Coldplay-EveryTeardropIsAWaterfall.mp3">Coldplay - Waterfall
+                    <span class="fullDuration">3:59</span>
+                </a>
+                </li>
+                <li><a href="/media/audio/Avicii-Rapture(remix).mp3">Avicii - Rapture (remix)
+                    <span class="fullDuration">4:00</span>
+                </a>
+                </li>
+                <li><a href="/media/audio/Kygo-CutYourTeeth(remix).mp3">Kygo - Cut Your Teeth(remix)
+                    <span class="fullDuration">6:36</span>
                 </a>
                 </li>
             </ol>
@@ -45,9 +54,12 @@
 </div>
 
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/jqcontrols.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+<script src="js/jqueryUi.js"></script>
 <script src="js/controls.js"></script>
 </body>
 </html>
