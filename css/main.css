@@ -15,10 +15,10 @@ p {
 }
 
 h1 {
-    background-color: rgba(255, 236, 14, 0.85);
+    background-color: rgba(203, 189, 43, 0.91);
     margin: auto;
     padding: 10px;
-    color: blue;
+    color: #584f9c;
     font-weight: bolder;
     text-align: center;
     font-size: 25px;
@@ -27,16 +27,16 @@ h1 {
 #wrapper {
     width: 400px;
     margin: 50px auto; /*-- virsus, apacia po 50 px, horizontaliai iscentruotas */
-    border:3px solid rgba(255, 236, 14, 0.85);
+    border:3px solid rgba(203, 189, 43, 0.91);
     border-radius: 10px;
 }
 
 #draggable {
     width: 400px;
     margin: 50px auto; /*-- virsus, apacia po 50 px, horizontaliai iscentruotas */
-    border:3px solid rgba(255, 236, 14, 0.85);
+    border:3px solid rgba(203, 189, 43, 0.91);
     border-radius: 10px;
-    border: 3px solid rgba(255, 236, 14, 0.85);
+    border: 3px solid rgba(203, 189, 43, 0.91);
     border-radius: 5px;
 }
 
@@ -46,7 +46,7 @@ nav {
 }
 
 #buttons {
-    background-color: rgba(255, 236, 14, 0.85);
+    background-color: rgba(148, 159, 198, 0.78);
     width: inherit;
     height:45px;
     padding: 3px 0;
@@ -57,19 +57,19 @@ nav {
     position: relative; /* kad su progressBar nebutu problemu */
     background-color: #1b1f16;
     height: 22px;
-    border-top: 1px solid rgba(255, 236, 14, 0.85);
+    border-top: 1px solid rgba(203, 189, 43, 0.91);
 }
 
 #progressBar {
     position: absolute; /* kad neislystu is tevinio elemento kuris yra defaultBar */
     height: inherit;
-    background-color: #3498DB;
+    background-color: #5955a0;
     width: 0px; /*pildysis proporcingai kai prades groti */
 }
 
 #playButton { /* NERODO ICON!!!*/
-    background-color: rgba(255, 236, 14, 0.85);
-    border: 1px solid blue;
+
+    border: 1px rgba(148, 159, 198, 0.78);
     height: 40px;
     width: 40px;
     background-image: url("/img/play.jpg");
@@ -77,14 +77,24 @@ nav {
     background-position: center;
     background-size: 100%;
 }
+#pauseButton{
+    border: 1px rgba(148, 159, 198, 0.78);
+    height: 40px;
+    width: 40px;
+    background-image: url("/img/pause.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
 
 #buttons span {
     font-size: 18px;
 }
 
 #muteButton { /* NERODO ICON!!!*/
-    background-color: rgba(255, 236, 14, 0.85);
-    border: 1px solid blue;
+
+    border: 1px rgba(148, 159, 198, 0.78);
     height: 40px;
     width: 40px;
     background-image: url("/img/speaker.png");
@@ -112,7 +122,7 @@ nav {
 #playListButton {
     float: right;
     margin-left: 10px;
-    border: 1px solid blue;
+    border: 1px rgba(148, 159, 198, 0.78);
     height: 40px;
     width: 40px;
     background-image: url("/img/playlist.png");
@@ -124,7 +134,7 @@ nav {
 #playList {
     width: inherit;
     height: 80px;
-    background-color: rgb(196, 255, 247);
+    background-color: rgba(203, 189, 95, 0.91);
     display: none;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -165,7 +175,7 @@ nav {
 
 .active, #playList ol li:hover {
     font-weight: bold;
-    background-color: #ffe415;
+    background-color: #e8da67;
 }
 .gif{
     width: 100%;
