@@ -40,9 +40,9 @@ $(document).ready(function () {
         par = link.parent();
         par.addClass('active').siblings().removeClass('active');
         audio[0].load();
+        audio[0].play();
         //playOrPause();
         clickedBar();
-        audio[0].play();
     }
 
     function toggleGif() {
@@ -91,13 +91,15 @@ $(document).ready(function () {
 
     $("#nextTrack").click(function () {
         link = playlist.find('a')[current];
+        console.log("pries " + current);
         if (current === tracks.length) {
             link = tracks[0];
             groti(link, audio[0]);
             current = 0;
         } else {
-            groti(link, audio[0]);
             ++current;
+            console.log("groja " + current);
+            groti(link, audio[0]);
         }
     });
 });
