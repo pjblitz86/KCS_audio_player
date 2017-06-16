@@ -25,12 +25,9 @@ $(document).ready(function () {
         }
         arPasleptasMute = !arPasleptasMute;
     });
-
-
     $("#playList").find('li').click(function () {
         $(".gif").fadeIn(1000);
     });
-
 });
 
 // playlisto sukurimas, kuria spausime daina, ta paleis
@@ -54,7 +51,6 @@ function paleistiPlaylist() {
         link = $(this);
         current = link.parent().index(); // nustato kuris dabartinis indeksas masyve
         groti(link, audio[0]); // paleidzia groti funkcija
-        update();
 
     });
     audio[0].addEventListener('ended', function (e) {
@@ -67,21 +63,24 @@ function paleistiPlaylist() {
             link = playlist.find('a')[current];
         }
         groti($(link), audio[0]); // paleidzia groti funkcija
-        update();
     });
+    $("#previousTrack").click(function () {
+
+    })
+    $("#nextTrack").click(function () {
+
+    })
 }
 function groti(link, player) {
-
     player.src = link.attr('href');
     par = link.parent();
     par.addClass('active').siblings().removeClass('active');
     audio[0].load();
     playOrPause();
-    update();
     clickedBar();
     audio[0].play();
-
 }
+
 
 // neatvaizduoja pilno laiko naujai uzkrautoms dainoms iskyrus pirma daina
 

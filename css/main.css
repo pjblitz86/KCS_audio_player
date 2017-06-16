@@ -92,6 +92,22 @@ nav {
     background-position: center;
     background-size: 100%;
 }
+#previousTrack {
+    background-image: url("/img/previousTrack.jpg");
+}
+
+#nextTrack {
+    background-image: url("/img/nextTrack.png");
+}
+
+#previousTrack, #nextTrack {
+    border: 1px solid blue;
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
 
 #playListButton {
     float: right;
@@ -113,10 +129,10 @@ nav {
     overflow-y: scroll;
     overflow-x: hidden;
     padding-top: 10px;
-
 }
 
-#playButton:active, #muteButton:active, #playListButton:active { /* kai paspaus tuo momentu pasikeis padetis siek tiek kad sukurti efekta paspaudimo */
+#playButton:active, #muteButton:active, #playListButton:active, #previousTrack:active, #nextTrack:active {
+    /* kai paspaus tuo momentu pasikeis padetis siek tiek kad sukurti efekta paspaudimo */
     position: relative;
     top: 2px;
 }
