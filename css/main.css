@@ -111,7 +111,7 @@ nav {
 }
 
 #previousTrack, #nextTrack {
-    border: 1px solid blue;
+    border: 1px rgba(148, 159, 198, 0.78);
     height: 40px;
     width: 40px;
     background-repeat: no-repeat;
