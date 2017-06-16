@@ -68,7 +68,7 @@ function paleistiPlaylist() {
 
     })
     $("#nextTrack").click(function () {
-
+        groti($(link), audio[0]);
     })
 }
 function groti(link, player) {
