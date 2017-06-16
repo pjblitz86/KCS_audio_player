@@ -71,14 +71,17 @@ function paleistiPlaylist() {
     $("#playList").find('li').click(function () {
         $(".gif").fadeIn(1000);
     });
-    // NEVEIKIA ABI FUNKCIJOS
+
+
+    // NEVEIKIA ABI FUNKCIJOS BLOGA LOGIKA
     $("#previousTrack").click(function () {
-        link = playlist.find('a')[current];
         if (current == 0) {
-            link = link.length;
+            link = playlist.find('a')[tracks.length-1];
             groti(link, audio[0]);
-        } else {
-            groti((link - 1), audio[0]);
+        }
+        else {
+            link = playlist.find('a')[current-1];
+            groti(link, audio[0]);
         }
     });
 

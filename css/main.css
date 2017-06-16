@@ -91,6 +91,7 @@ nav {
 
 #buttons span {
     font-size: 18px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 #muteButton { /* NERODO ICON!!!*/
@@ -191,11 +192,3 @@ nav {
     display: none;
 }
 
-#fullDuration, #currentTime {
-
-    font-size: large;
-    font-family: "Calibri";
-    color: rgba(255, 230, 104, 0.91);
-    position: relative;
-    float: inherit;
-}
