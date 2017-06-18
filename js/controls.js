@@ -27,12 +27,12 @@ bar.addEventListener('click', clickedBar, false);
 function playOrPause() { /* paleis/sustabdys takeli kai spausime play mygtuka ir pakeis ikona atitinkamai*/
     if (!myTrack.paused && !myTrack.ended) {
         myTrack.pause();
-        playButton.style.backgroundImage = 'url("/img/play.jpg")';
+        playButton.style.backgroundImage = 'url("img/play.jpg")';
         window.clearInterval(updateTime);
         /* sustabdo laiko atnaujinima */
     } else {
         myTrack.play();
-        playButton.style.backgroundImage = 'url("/img/pause.png")';
+        playButton.style.backgroundImage = 'url("img/pause.png")';
         updateTime = setInterval(update, 500);
         /* 500 yra milisekundes */
         /* iskviecia funkcija update kad atnaujintu laika */
@@ -42,10 +42,10 @@ function playOrPause() { /* paleis/sustabdys takeli kai spausime play mygtuka ir
 function muteOrUnmute() { /* toggle garso mygtukas */
     if (myTrack.muted) {
         myTrack.muted = false;
-        muteButton.style.backgroundImage = 'url("/img/speaker.png")';
+        muteButton.style.backgroundImage = 'url("img/speaker.png")';
     } else {
         myTrack.muted = true;
-        muteButton.style.backgroundImage = 'url("/img/muted.png")';
+        muteButton.style.backgroundImage = 'url("img/muted.png")';
     }
 }
 
@@ -63,7 +63,7 @@ function update() { /*atnaujina laika dabartini */
     } else {
         currentTime.innerHTML = "0.00";
         /* nustato kad pasibaigus trackui laikas griztu i 0.00 */
-        playButton.style.backgroundImage = 'url("/img/play.jpg")';
+        playButton.style.backgroundImage = 'url("img/play.jpg")';
         /*ir pasikeistu is pauses i play buttonas */
         progressBar.style.width = "0px";
         /* baigus groti audio juostos uzsipildymo plotis bus 0 kad CSS suprastu */
